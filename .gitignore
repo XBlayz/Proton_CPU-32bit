@@ -1,0 +1,29 @@
+# Vivado project folder
+/vivado_project/
+
+# Vivado temp files
+*.log
+*.jou
+*.str
+*.cache
+*.xil
+*.runs
+*.hw
+*.ip_user_files
+*.gen
+*.sim
+*.dcp
+*.wdb
+*.xpr
+*.backup.*
+
+# Synthesis output folders
+synthesis/
+simulation/
+impl_*/
+
+# Other files to ignore
+*.bit
+*.bin
+*.mcs
+*.xsa
