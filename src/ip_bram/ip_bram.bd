@@ -1,0 +1,204 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7957AD4476FFE50",
+      "device": "xc7z020clg400-1",
+      "name": "ip_bram",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "blk_mem_gen_0": ""
+    },
+    "interface_ports": {
+      "BRAM_PORT_A": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "BRAM_CTRL"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "BRAM_PORT_A_addr",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "BRAM_PORT_A_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "BRAM_PORT_A_din",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "DOUT": {
+            "physical_name": "BRAM_PORT_A_dout",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "BRAM_PORT_A_en",
+            "direction": "I"
+          },
+          "RST": {
+            "physical_name": "BRAM_PORT_A_rst",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "BRAM_PORT_A_we",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "BRAM_PORT_B": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "BRAM_CTRL"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "BRAM_PORT_B_addr",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "BRAM_PORT_B_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "BRAM_PORT_B_din",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "DOUT": {
+            "physical_name": "BRAM_PORT_B_dout",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "BRAM_PORT_B_en",
+            "direction": "I"
+          },
+          "RST": {
+            "physical_name": "BRAM_PORT_B_rst",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "BRAM_PORT_B_we",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "ports": {
+      "rst_busy_A": {
+        "direction": "O"
+      },
+      "rst_busy_B": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "ip_bram_blk_mem_gen_0_1",
+        "xci_path": "ip\\ip_bram_blk_mem_gen_0_1\\ip_bram_blk_mem_gen_0_1.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTA_0_1": {
+        "interface_ports": [
+          "BRAM_PORT_A",
+          "blk_mem_gen_0/BRAM_PORTA"
+        ]
+      },
+      "BRAM_PORTB_0_1": {
+        "interface_ports": [
+          "BRAM_PORT_B",
+          "blk_mem_gen_0/BRAM_PORTB"
+        ]
+      }
+    },
+    "nets": {
+      "blk_mem_gen_0_rsta_busy": {
+        "ports": [
+          "blk_mem_gen_0/rsta_busy",
+          "rst_busy_A"
+        ]
+      },
+      "blk_mem_gen_0_rstb_busy": {
+        "ports": [
+          "blk_mem_gen_0/rstb_busy",
+          "rst_busy_B"
+        ]
+      }
+    }
+  }
+}
