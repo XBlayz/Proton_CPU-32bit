@@ -43,7 +43,7 @@
     <a href="https://github.com/XBlayz/Proton_CPU-32bit/issues">Report Bug</a>
     ·
     <a href="https://github.com/XBlayz/Proton_CPU-32bit/issues">Request Feature</a>
-    .
+    ·
     <a href="https://github.com/XBlayz/Proton_CPU-32bit/discussions">Discussions</a>
   </p>
 </div>
@@ -83,7 +83,14 @@
 
 [![Product Name Screen Shot][product-screenshot]]
 
-extended_description
+Proton CPU (32bit) is a custom processor architecture based on the [RISC-V](https://riscv.org/) **RV32I** base integer instruction set, implemented in full.
+
+The development follows a model-first approach:
+
+1. **Software model** – a simulated model of the architecture written in Python, used to define and validate the behavior of the CPU.
+2. **HDL implementation** – the validated model is then translated into HDL code.
+
+The project starts from a simple **single-cycle** microarchitecture, which will be refined in future iterations.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,7 +99,8 @@ extended_description
 ### Built With
 <!-- https://shields.io/ -->
 <!-- https://github.com/Ileriayo/markdown-badges -->
-* ...
+* [![Python][python-shield]][python-url]
+* HDL (to be decided)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,13 +108,21 @@ extended_description
 
 <!-- GETTING STARTED -->
 ## Getting Started
-...
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
-...
+* [Python 3.14](https://www.python.org/downloads/)
+* Additional dependencies: _to be defined_
 
 ### Installation
-1. ...
+1. Clone the repo
+   ```sh
+   git clone https://github.com/XBlayz/Proton_CPU-32bit.git
+   ```
+2. Enter the project folder
+   ```sh
+   cd Proton_CPU-32bit
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +130,7 @@ extended_description
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-...
+_Work in progress: usage instructions will be added once the Python model is available._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,7 +138,9 @@ extended_description
 
 <!-- ROADMAP -->
 ## Roadmap
-- [ ] ...
+- [ ] Python model of the single-cycle RV32I CPU
+- [ ] HDL implementation of the single-cycle CPU
+- [ ] Future developments (to be defined)
 
 See the [open issues](https://github.com/XBlayz/Proton_CPU-32bit/issues) for a full list of proposed features (and known issues).
 
@@ -167,7 +185,7 @@ Project Link: [https://github.com/XBlayz/Proton_CPU-32bit](https://github.com/XB
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-* [...]()
+* [RISC-V International – Specifications](https://riscv.org/technical/specifications/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,5 +204,7 @@ Project Link: [https://github.com/XBlayz/Proton_CPU-32bit](https://github.com/XB
 [issues-shield]: https://img.shields.io/github/issues/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
 [issues-url]: https://github.com/XBlayz/Proton_CPU-32bit/issues
 [license-shield]: https://img.shields.io/github/license/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
-[license-url]: https://github.com//Proton_CPU-32bit/blob/master/LICENSE
+[license-url]: https://github.com/XBlayz/Proton_CPU-32bit/blob/main/LICENSE
 [product-screenshot]: .img/screenshot.png
+[python-shield]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[python-url]: https://www.python.org/
