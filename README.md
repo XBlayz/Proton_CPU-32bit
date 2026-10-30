@@ -24,6 +24,7 @@
 
 
 <!-- PROJECT LOGO -->
+<!-- TODO: add the project logo to `.img/logo.png` -->
 <br />
 <div align="center">
   <a href="https://github.com/XBlayz/Proton_CPU-32bit">
@@ -38,6 +39,7 @@
     <a href="https://github.com/XBlayz/Proton_CPU-32bit"><strong>Explore the docs »</strong></a>
     <br />
     <br />
+    <!-- TODO: replace the `View Demo` link with a real demo -->
     <a href="https://github.com/XBlayz/Proton_CPU-32bit">View Demo</a>
     ·
     <a href="https://github.com/XBlayz/Proton_CPU-32bit/issues">Report Bug</a>
@@ -81,14 +83,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<!-- TODO: add the product screenshot to `.img/screenshot.png` -->
 [![Product Name Screen Shot][product-screenshot]]
 
 Proton CPU (32bit) is a custom processor architecture based on the [RISC-V](https://riscv.org/) **RV32I** base integer instruction set, implemented in full.
 
-The development follows a model-first approach:
-
-1. **Software model** – a simulated model of the architecture written in Python, used to define and validate the behavior of the CPU.
-2. **HDL implementation** – the validated model is then translated into HDL code.
+The CPU is described, simulated and verified with [ROHD](https://intel.github.io/rohd-website/) (Rapid Open Hardware Development), a framework for describing and verifying hardware in the Dart programming language. SystemVerilog is generated from the ROHD description for downstream tools.
 
 The project starts from a simple **single-cycle** microarchitecture, which will be refined in future iterations.
 
@@ -99,8 +99,10 @@ The project starts from a simple **single-cycle** microarchitecture, which will 
 ### Built With
 <!-- https://shields.io/ -->
 <!-- https://github.com/Ileriayo/markdown-badges -->
-* [![Python][python-shield]][python-url]
-* HDL (to be decided)
+* [![Dart][dart-shield]][dart-url]
+* [ROHD](https://intel.github.io/rohd-website/) `^0.6.11`
+* [ROHD-HCL](https://github.com/intel/rohd-hcl) `^0.2.1` (reusable hardware components)
+* [ROHD-VF](https://github.com/intel/rohd-vf) (verification framework)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,17 +113,56 @@ The project starts from a simple **single-cycle** microarchitecture, which will 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
-* [Python 3.14](https://www.python.org/downloads/)
-* Additional dependencies: _to be defined_
+* [Git](https://git-scm.com/downloads)
+* [Dart SDK](https://dart.dev/get-dart) `^3.13.0` (includes the Dart VM, compiler, analyzer and `pub` package manager; no other compiler is required)
+* [Visual Studio Code](https://code.visualstudio.com/) with the following extensions:
+  * [Dart](https://dart.dev/tools/vs-code) (`Dart-Code.dart-code`)
+  * [ROHD Schematic Viewer](https://marketplace.visualstudio.com/items?itemName=intel-corporation.rohd-schematic-viewer) (`intel-corporation.rohd-schematic-viewer`)
+  * [ROHD Wave Viewer](https://marketplace.visualstudio.com/items?itemName=intel-corporation.rohd-wave-viewer) (`intel-corporation.rohd-wave-viewer`)
+
+Official guides: [Get the Dart SDK](https://dart.dev/get-dart), [Dart in VS Code](https://dart.dev/tools/vs-code), [ROHD setup](https://intel.github.io/rohd-website/get-started/setup).
 
 ### Installation
-1. Clone the repo
+1. Install the Dart SDK (see the [official guide](https://dart.dev/get-dart))
+   * Windows (elevated PowerShell, requires [Chocolatey](https://chocolatey.org/install)):
+     ```sh
+     choco install dart-sdk
+     ```
+   * macOS ([Homebrew](https://brew.sh/)):
+     ```sh
+     brew tap dart-lang/dart
+     brew install dart
+     ```
+   * Linux (Debian/Ubuntu): follow the `apt-get` repository setup in the [official guide](https://dart.dev/get-dart), then:
+     ```sh
+     sudo apt-get update && sudo apt-get install dart
+     ```
+2. Verify the installation (expected: Dart `3.13` or newer)
+   ```sh
+   dart --version
+   ```
+3. Install [Visual Studio Code](https://code.visualstudio.com/) and the extensions
+   ```sh
+   code --install-extension Dart-Code.dart-code
+   code --install-extension intel-corporation.rohd-schematic-viewer
+   code --install-extension intel-corporation.rohd-wave-viewer
+   ```
+   Reload the VS Code window after installing the ROHD extensions.
+4. Clone the repo
    ```sh
    git clone https://github.com/XBlayz/Proton_CPU-32bit.git
    ```
-2. Enter the project folder
+5. Enter the project folder
    ```sh
    cd Proton_CPU-32bit
+   ```
+6. Install the dependencies
+   ```sh
+   dart pub get
+   ```
+7. Run the tests
+   ```sh
+   dart test
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -130,7 +171,8 @@ To get a local copy up and running, follow these steps.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-_Work in progress: usage instructions will be added once the Python model is available._
+<!-- TODO: add usage instructions (simulation, waveform dump, SystemVerilog generation, schematic) once the ROHD model is available -->
+_Work in progress: usage instructions will be added once the ROHD model is available._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,8 +180,10 @@ _Work in progress: usage instructions will be added once the Python model is ava
 
 <!-- ROADMAP -->
 ## Roadmap
-- [ ] Python model of the single-cycle RV32I CPU
-- [ ] HDL implementation of the single-cycle CPU
+- [ ] ROHD implementation of the single-cycle RV32I CPU
+- [ ] Testbenches and verification
+- [ ] SystemVerilog generation
+<!-- TODO: define the future developments -->
 - [ ] Future developments (to be defined)
 
 See the [open issues](https://github.com/XBlayz/Proton_CPU-32bit/issues) for a full list of proposed features (and known issues).
@@ -186,6 +230,8 @@ Project Link: [https://github.com/XBlayz/Proton_CPU-32bit](https://github.com/XB
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 * [RISC-V International – Specifications](https://riscv.org/technical/specifications/)
+* [ROHD](https://intel.github.io/rohd-website/)
+* [ROHD-HCL](https://github.com/intel/rohd-hcl)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,5 +252,5 @@ Project Link: [https://github.com/XBlayz/Proton_CPU-32bit](https://github.com/XB
 [license-shield]: https://img.shields.io/github/license/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
 [license-url]: https://github.com/XBlayz/Proton_CPU-32bit/blob/main/LICENSE
 [product-screenshot]: .img/screenshot.png
-[python-shield]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
-[python-url]: https://www.python.org/
+[dart-shield]: https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white
+[dart-url]: https://dart.dev/
