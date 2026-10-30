@@ -4,11 +4,11 @@
 
 
 <!-- Parameters:
-*** `github_username`, `repo_name`,
-*** `project_owner_name`, `email_user`, `email_client`,
-*** `project_title`, `short_description`
+*** `XBlayz`, `Proton_CPU-32bit`,
+*** `XBlayz`, `xblayz.github`, `protonmail.com`,
+*** `Proton CPU (32bit)`, `Simple RISC-V CPU that implement the RV32I extension`
 *** `extended_description`
-*** `license_type`
+*** `GPL-3.0`
 -->
 
 
@@ -26,25 +26,25 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/XBlayz/Proton_CPU-32bit">
     <img src=".img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Proton CPU (32bit)</h3>
 
   <p align="center">
-    short_description
+    Simple RISC-V CPU that implement the RV32I extension
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/XBlayz/Proton_CPU-32bit"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/XBlayz/Proton_CPU-32bit">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/XBlayz/Proton_CPU-32bit/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/XBlayz/Proton_CPU-32bit/issues">Request Feature</a>
     .
-    <a href="https://github.com/github_username/repo_name/discussions">Discussions</a>
+    <a href="https://github.com/XBlayz/Proton_CPU-32bit/discussions">Discussions</a>
   </p>
 </div>
 
@@ -124,7 +124,7 @@ extended_description
 ## Roadmap
 - [ ] ...
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/XBlayz/Proton_CPU-32bit/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -149,7 +149,7 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- LICENSE -->
 ## License
-Distributed under the license_type License. See `LICENSE` for more information.
+Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,9 +157,9 @@ Distributed under the license_type License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
-project_owner_name - email_user@email_client
+XBlayz - xblayz.github@protonmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/XBlayz/Proton_CPU-32bit](https://github.com/XBlayz/Proton_CPU-32bit)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,16 +175,16 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[discussions-shield]: https://img.shields.io/github/discussions/github_username/repo_name.svg?style=for-the-badge
-[discussions-url]: https://github.com/github_username/repo_name/discussions
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com//repo_name/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
+[contributors-url]: https://github.com/XBlayz/Proton_CPU-32bit/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
+[forks-url]: https://github.com/XBlayz/Proton_CPU-32bit/network/members
+[discussions-shield]: https://img.shields.io/github/discussions/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
+[discussions-url]: https://github.com/XBlayz/Proton_CPU-32bit/discussions
+[stars-shield]: https://img.shields.io/github/stars/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
+[stars-url]: https://github.com/XBlayz/Proton_CPU-32bit/stargazers
+[issues-shield]: https://img.shields.io/github/issues/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
+[issues-url]: https://github.com/XBlayz/Proton_CPU-32bit/issues
+[license-shield]: https://img.shields.io/github/license/XBlayz/Proton_CPU-32bit.svg?style=for-the-badge
+[license-url]: https://github.com//Proton_CPU-32bit/blob/master/LICENSE
 [product-screenshot]: .img/screenshot.png
